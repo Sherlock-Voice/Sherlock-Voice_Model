@@ -68,7 +68,7 @@ def inference(predict_sentence): # input = 보이스피싱 탐지하고자 하�
         softm_confidence_level = softm_probabilities[0][predicted_class.item()].item() * 100
         #print("predict : ", predicted_class)
         #print("softmax 확률 : ",softm_confidence_level)
-        print(softm_probabilities[0][1].item()*100)
+        #print(softm_probabilities[0][1].item()*100)
 
 
         sigm_probabilities = F.sigmoid(out)
