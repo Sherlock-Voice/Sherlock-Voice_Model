@@ -1,4 +1,4 @@
-C://Users////er112//VSCode//HUFS//capstone//KoBERT_model//train_5epch.pt filter=lfs diff=lfs merge=lfs -text
+C://Users//er112//VSCode//HUFS//capstone//KoBERT_model//train_5epch.pt filter=lfs diff=lfs merge=lfs -text
 C://Users//er112//VSCode//HUFS//capstone//KoBERT_model//train.pt filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.LightingData.asset filter=lfs diff=lfs merge=lfs -text
