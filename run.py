@@ -14,12 +14,10 @@
 #pip3 install transformers
 #pip3 install pytorch
 
-
-
 import torch
 from KoBERT_model import run
 
-
-
 if __name__=="__main__":
-    run('이따가 뚝섬 가서 맛있는거 먹자. 오늘 비온다고 했으니까 혹시 모르니 우산도 챙기고.')
+    run("""안녕하세요, 중앙지검검찰청에서 전화드렸습니다. 000씨 맞으실까요? 혹시 주변에 000씨라고 지인 되실까요?
+다름이 아니라 이 분이 지금 부정부패 혐의로 조사를 받고 있는데 000씨에게 입금이 된 내역이 조사중 발견 되어 연락드렸습니다.
+    """)
