@@ -37,7 +37,7 @@ setuptools==65.6.3
 six==1.16.0
 sympy==1.12
 tbb==2021.12.0
-tokenizers==0.13.3
+#tokenizers==0.11.4
 torch==2.3.0
 tqdm==4.64.1
 transformers==4.24.0

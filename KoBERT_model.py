@@ -21,13 +21,14 @@ bertmodel, vocab = get_kobert_model('skt/kobert-base-v1',tokenizer.vocab_file)  
 #device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 device = torch.device('cpu')
 
+model = BERTClassifier(bertmodel,  dr_rate=0.4).to(device)
 
 
 def load_model():
     global model
     model = BERTClassifier(bertmodel,  dr_rate=0.4).to(device)
 
-    model.load_state_dict(torch.load('C://Users//er112//VSCode//HUFS//capstone//KoBERT_model//train_5epch.pt', map_location=device), strict = False)
+    model.load_state_dict(torch.load('train_5epch.pt', map_location=device), strict = False)
     model.eval()
     #print(model)
 
@@ -41,6 +42,9 @@ def load_dataset(predict_sentence):
 
 def inference(predict_sentence): # input = 보이스피싱 탐지하고자 하는 sentence
     print("※ KoBERT 추론 시작 ※")
+
+    model.load_state_dict(torch.load('train_5epch.pt', map_location=device), strict = False)
+    model.eval()
 
     test_dataloader = load_dataset(predict_sentence)
 
@@ -98,4 +102,6 @@ def run(text):
     load_model()
     return inference(text)
 
+def inf(text):
+    return inference(text)
 
